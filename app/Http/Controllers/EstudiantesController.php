@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Estudiante;
+use App\Http\Requests\StoreEstudiante;
 
 class EstudiantesController extends Controller
 {
@@ -34,7 +35,7 @@ class EstudiantesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreEstudiante $request)
     {
         $estudiante = new Estudiante;
         $estudiante->apellido_paterno = $request->apellido_paterno;
