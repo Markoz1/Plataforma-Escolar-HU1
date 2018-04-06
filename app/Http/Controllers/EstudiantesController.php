@@ -14,7 +14,8 @@ class EstudiantesController extends Controller
      */
     public function index()
     {
-        return view('usuarios.estudiantes.inicio');
+        $estudiantes = Estudiante::all();
+        return view('usuarios.estudiantes.inicio',compact('estudiantes'));
     }
 
     /**
@@ -35,8 +36,25 @@ class EstudiantesController extends Controller
      */
     public function store(Request $request)
     {
+        $estudiante = new Estudiante;
+        $estudiante->apellido_paterno = $request->apellido_paterno;
+        $estudiante->apellido_materno = $request->apellido_materno;
+        $estudiante->nombre = $request->nombre;
+        $estudiante->pais = $request->pais;
+        $estudiante->departamento = $request->departamento;
+        $estudiante->ci = $request->ci;
+        $estudiante->fecha_nacimiento = $request->fecha_nacimiento;
+        $estudiante->sexo = $request->sexo;
+        $estudiante->direccion = $request->direccion;
+        $estudiante->telefono = $request->telefono;
+        $estudiante->save();
+        // dd($estudiante);
+        return redirect()
+            ->route('estudiantes.index')
+            ->with('mensaje', 'El estudiante se registro con exito');
+
         // return 'store';
-        return $request;
+        // return $request;
     }
 
     /**

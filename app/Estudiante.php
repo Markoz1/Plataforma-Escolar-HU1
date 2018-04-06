@@ -14,4 +14,5 @@ class Estudiante extends Model
         'pais', 'departamento', 'ci', 'fecha_nacimiento',
         'sexo', 'direccion' ,'telefono'
     ];
+    public $timestamps = false;
 }
