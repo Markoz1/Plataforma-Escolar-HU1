@@ -15,3 +15,5 @@ Route::get('/', function () {
     return view('principal.inicio');
 });
 Route::resource('estudiantes', 'EstudiantesController');
+// Route::get('/estudiantes/nuevo', 'EstudiantesController@create')->name('estudiantes.create');
+// Route::post('/estudiantes/registrar', 'EstudiantesController@store');
