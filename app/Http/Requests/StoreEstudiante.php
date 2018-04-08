@@ -24,16 +24,16 @@ class StoreEstudiante extends FormRequest
     public function rules()
     {
         return [
-            'apellido_paterno' => 'required|min:2|max:32',
-            'apellido_materno' => 'required|min:2|max:32',
-            'nombre' => 'required|min:2|max:32',
-            'pais' => 'required|min:2|max:32',
-            'departamento' => 'required|min:2|max:32',
-            'ci' => 'required|min:2|max:32',
-            'fecha_nacimiento' => 'required',
+            'apellido_paterno' => 'required|min:3|max:100|alpha',
+            'apellido_materno' => 'nullable|min:3|max:100|alpha',
+            'nombre' => 'required|min:3|max:50|alpha',
+            'pais' => 'nullable|min:4|max:25|alpha',
+            'departamento' => 'nullable|min:4|max:25|alpha',
+            'ci' => 'nullable|min:6|max:15|alpha_num',
+            'fecha_nacimiento' => 'required',//falta restringir entre un rango
             'sexo' => 'required|in:M,F',
-            'direccion' => '',
-            'telefono' => '',
+            'direccion' => 'nullable|min:6|max:255',
+            'telefono' => 'nullable|min:7|max:14',
         ];
     }
 }
