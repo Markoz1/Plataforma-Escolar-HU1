@@ -11,22 +11,19 @@
                         <div class="form-group row">
                             <label for="apellido_paterno" class="col-md-4 col-form-label">Apellido Paterno</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control {{$errors->has('apellido_paterno')? "is-invalid":""}}" name="apellido_paterno" id="apellido_paterno">
-                                <div class="invalid-feedback">{{ $errors->first('apellido_paterno') }}</div>
+                                @include('usuarios.estudiantes.mensaje-error',['name'=>'apellido_paterno','type'=>'text'])
                             </div>
                         </div>
                         <div class="form-group row my-4">
                             <label for="apellido_materno" class="col-md-4 col-form-label">Apellido Materno</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control {{$errors->has('apellido_materno')? "is-invalid":""}}"  name="apellido_materno" id="apellido_materno">
-                                <div class="invalid-feedback">{{ $errors->first('apellido_materno') }}</div>
+                                @include('usuarios.estudiantes.mensaje-error',['name'=>'apellido_materno','type'=>'text'])
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="nombre" class="col-md-4 col-form-label">Nombre(s)</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control {{$errors->has('nombre')? "is-invalid":""}}" name="nombre" id="nombre">
-                                <div class="invalid-feedback">{{ $errors->first('nombre') }}</div>
+                                @include('usuarios.estudiantes.mensaje-error',['name'=>'nombre','type'=>'text'])
                             </div>
                         </div>
                     <hr class="my-4">
@@ -34,15 +31,13 @@
                         <div class="form-group row">
                             <label for="pais" class="col-md-4 col-form-label">País</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control {{$errors->has('pais')? "is-invalid":""}}" name="pais" id="pais">
-                                <div class="invalid-feedback">{{ $errors->first('pais') }}</div>
+                                @include('usuarios.estudiantes.mensaje-error',['name'=>'pais','type'=>'text'])
                             </div>
                         </div>
                         <div class="form-group row mt-4">
                             <label for="departamento" class="col-md-4 col-form-label">Departamento</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control {{$errors->has('departamento')? "is-invalid":""}}" name="departamento" id="departamento">
-                                <div class="invalid-feedback">{{ $errors->first('departamento') }}</div>
+                                @include('usuarios.estudiantes.mensaje-error',['name'=>'departamento','type'=>'text'])
                             </div>
                         </div>
                 </div>
@@ -51,8 +46,7 @@
                         <div class="form-group row">
                             <label for="ci" class="col-md-4 col-form-label">C.I.</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control {{$errors->has('ci')? "is-invalid":""}}" name="ci" id="ci">
-                                <div class="invalid-feedback">{{ $errors->first('ci') }}</div>
+                                @include('usuarios.estudiantes.mensaje-error',['name'=>'ci','type'=>'text'])
                             </div>
                         </div>
                     <hr class="my-4">
@@ -61,8 +55,7 @@
                             <h6 class="card-title mb-2">4. Fecha de Nacimiento</h6>
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <input type="date" class="form-control {{$errors->has('fecha_nacimiento')? "is-invalid":""}}" name="fecha_nacimiento" id="fecha_nacimiento">
-                                        <div class="invalid-feedback">{{ $errors->first('fecha_nacimiento') }}</div>
+                                        @include('usuarios.estudiantes.mensaje-error',['name'=>'fecha_nacimiento','type'=>'date'])
                                     </div>
                                 </div>   
                         </div>
@@ -83,16 +76,14 @@
                     <h6 class="card-title mb-2">6. Dirección del estudiante</h6>
                         <div class="form-group row">
                             <div class="col-md-12">
-                                <input type="text" class="form-control {{$errors->has('direccion')? "is-invalid":""}}" name="direccion" id="direccion">
-                                <div class="invalid-feedback">{{ $errors->first('direccion') }}</div>
+                                @include('usuarios.estudiantes.mensaje-error',['name'=>'direccion','type'=>'text'])
                             </div>
                         </div>
                     <hr class="my-4">
                     <h6 class="card-title mb-2">7. Teléfono o celular</h6>
                     <div class="form-group row">
                         <div class="col-md-12">
-                            <input type="text" class="form-control {{$errors->has('telefono')? "is-invalid":""}}" name="telefono" id="telefono">
-                            <div class="invalid-feedback">{{ $errors->first('telefono') }}</div>
+                            @include('usuarios.estudiantes.mensaje-error',['name'=>'telefono','type'=>'text'])
                         </div>
                     </div>     
                 </div>
